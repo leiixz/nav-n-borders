@@ -1,0 +1,147 @@
+/* Basic reset to remove default margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Style for the navbar table */
+.navbar {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #1e1e1e;
+}
+
+.navbar th {
+    padding: 15px;
+}
+
+.navbar th a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 15px 20px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 1rem; /* Base font size */
+}
+
+.navbar th a:hover,
+.navbar th a.active {
+    background-color: #333333;
+    color: #ffcc00;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .navbar th a {
+        padding: 12px 15px;
+        font-size: 0.9rem; /* Slightly smaller font for medium screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar th {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar th a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        font-size: 1.1rem; /* Larger font for small screens */
+    }
+}
+
+/* Style for the content container */
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.content-item {
+    position: relative;
+    width: 250px; /* Fixed width for each content item */
+    padding: 10px;
+    border: 1px solid #383838; /* Thin border */
+    border-radius: 5px;
+    background-color: #1e1e1e;
+    text-align: center;
+}
+
+.content-item:hover .main-image {
+    transform: scale(1.1); /* Pop-up effect on hover */
+}
+
+.main-image {
+    display: block;
+    width: 100%;
+    height: 250px; /* Fixed height */
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.content-info {
+    padding: 10px;
+}
+
+.content-info h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.content-info p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Style for the image citation */
+.image-citation {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #aaaaaa;
+    text-align: center;
+}
+
+.image-citation a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.image-citation a:hover {
+    text-decoration: underline;
+}
+
+/* Style for the main image container */
+.index-image-container {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 2px;
+    border: 5px solid #383838;
+    border-radius: 10%;
+}
+
+/* Style for the main image */
+.index-main-image {
+    display: block;
+    width: 250px; /* Fixed width */
+    height: 250px; /* Fixed height */
+    object-fit: cover;
+    border-radius: 10%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.index-main-image:hover {
+    transform: scale(1.1);
+}
